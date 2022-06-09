@@ -1,6 +1,6 @@
 a <- 3
-a <- 10
 b <- a + 1
+b <- b * b
 c <- "Hello"
 
 OUTPUT a
@@ -14,7 +14,7 @@ OUTPUT PI
 OUTPUT CLASS_SIZE
 
 d <- a + b
-e <- a DIV b
+e <- b DIV a
 f <- a MOD b
 
 
@@ -60,9 +60,6 @@ length ← 0
 FOR char IN message
 	length ← length + 1
 ENDFOR
-# will calculate the
-# number of characters
-# in message
 
 reversed ← ''
 FOR char IN message

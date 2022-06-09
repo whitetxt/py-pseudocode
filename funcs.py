@@ -6,6 +6,8 @@ def get_type(value):
 		return "Integer"
 	elif isinstance(value, float):
 		return "Real"
+	elif isinstance(value, bool):
+		return "Boolean"
 	elif isinstance(value, str):
 		if value[0] in ["'", '"']:
 			right_side_type = "String"
@@ -16,7 +18,7 @@ def get_type(value):
 		elif value.startswith("["):
 			right_side_type = "Array"
 		else:
-			base_error("TypeError", "Invalid type", value)
+			return "Variable"
 		return right_side_type
 	elif isinstance(value, list):
 		return "Array"
@@ -31,5 +33,8 @@ def get_real_value(value):
 		return int(value)
 	elif type == "Array":
 		return value
+	elif type == "Boolean":
+		return bool(value)
 	else:
 		return value
+		
