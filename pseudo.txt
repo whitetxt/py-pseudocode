@@ -1,0 +1,184 @@
+a <- 3
+b <- a + 1
+c <- "Hello"
+
+
+CONSTANT PI <- 3.1415926
+CONSTANT CLASS_SIZE <- 23
+
+
+d <- a + b
+e <- a DIV b
+f <- a MOD b
+
+
+g <- a > b
+h <- a < b
+i <- a >= b
+j <- a <= b
+k <- a = b
+l <- a != b
+
+
+m <- a AND b
+n <- a OR b
+o <- NOT a
+
+
+REPEAT
+	OUTPUT a
+	a <- a - 1
+UNTIL a = 0
+
+
+WHILE a < 4
+	OUTPUT a
+	a <- a + 1
+ENDWHILE
+
+
+FOR p <- 1 TO 5
+	OUTPUT p
+ENDFOR
+
+FOR p <- 1 TO 5 STEP 2
+	OUTPUT p
+ENDFOR
+
+FOR p <- 5 TO 1 STEP -2
+	OUTPUT p
+ENDFOR
+
+
+length ← 0
+FOR char IN message
+	length ← length + 1
+ENDFOR
+# will calculate the
+# number of characters
+# in message
+
+reversed ← ''
+FOR char IN message
+	reversed ← char + reversed
+ENDFOR
+OUTPUT reversed
+
+
+IF (a MOD 2) = 0 THEN
+	OUTPUT "a is even"
+ENDIF
+
+IF (a MOD 2) = 0 THEN
+	OUTPUT "a is even"
+ELSE
+	OUTPUT "a is odd"
+ENDIF
+
+a ← 1
+IF (a MOD 4) = 0 THEN
+	OUTPUT 'multiple of 4'
+ELSE
+	IF (a MOD 4) = 1 THEN
+		OUTPUT 'leaves a remainder of 1'
+	ELSE
+		IF (a MOD 4) = 2 THEN
+			OUTPUT 'leaves a remainder of 2'
+		ELSE
+			OUTPUT 'leaves a remainder of 3'
+		ENDIF
+	ENDIF
+ENDIF
+
+
+a ← 1
+IF (a MOD 4) = 0 THEN
+	OUTPUT 'multiple of 4'
+ELSE IF (a MOD 4) = 1 THEN
+	OUTPUT 'leaves a remainder of 1'
+ELSE IF (a MOD 4) = 2 THEN
+	OUTPUT 'leaves a remainder of 2'
+ELSE
+	OUTPUT 'leaves a remainder of 3'
+ENDIF
+
+
+primes <- [2, 3, 5, 7, 11, 13]
+
+OUTPUT primes[0]
+
+primes[5] <- 17
+
+
+table <- [[1, 2], [2, 4], [3, 6], [4, 8]]
+OUTPUT table[3][1]
+
+table[3][1] <- 16
+
+OUTPUT LEN(table)
+
+primes ← [2, 3, 5, 7, 11, 13]
+total ← 0
+FOR prime IN primes
+	total ← total + prime
+ENDFOR
+OUTPUT 'Sum of the values in primes is'
+OUTPUT total
+
+RECORD Car
+	make : String
+	model : String
+	reg : String
+	price : Real
+	noOfDoors : Integer
+ENDRECORD
+
+myCar <- Car("Ford", "Focus", "DX17 GYT", 1399.99, 5)
+
+myCar.model <- "Fiesta"
+
+OUTPUT myCar.model
+
+SUBROUTINE showAdd(a, b)
+	result <- a + b
+	OUTPUT result
+ENDSUBROUTINE
+
+SUBROUTINE sayHi()
+	OUTPUT "Hi"
+ENDSUBROUTINE
+
+SUBROUTINE add(a, b)
+	result <- a + b
+	RETURN result
+ENDSUBROUTINE
+
+showAdd(2, 3)
+
+answer ← add(2, 3) * 6
+
+OUTPUT LEN("Computer Science")
+
+
+OUTPUT POSITION("Computer Science", "m")
+
+OUTPUT SUBSTRING(2, 9, "Computer Science")
+
+OUTPUT "Computer" + "Science"
+
+OUTPUT STRING_TO_INT("16")
+
+OUTPUT STRING_TO_REAL("16.3")
+
+OUTPUT INT_TO_STRING(16)
+OUTPUT REAL_TO_STRING(16.3)
+
+OUTPUT CHAR_TO_CODE("a")
+OUTPUT CODE_TO_CHAR(97)
+
+g <- USERINPUT
+OUTPUT g
+OUTPUT a, g
+
+diceRoll <- RANDOM_INT(1, 6)
+OUTPUT diceRoll
